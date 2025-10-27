@@ -1,15 +1,8 @@
-# 🎯 REPO Debug Overlay — Unity Visualizer (for Developers)
+# 🎯 REPO CheatV1
 
 <div align="center">
 
-![Unity](https://img.shields.io/badge/Unity-2022.3+-black.svg?style=for-the-badge&logo=unity)  
-![.NET](https://img.shields.io/badge/.NET-Standard%202.1-512BD4.svg?style=for-the-badge&logo=dotnet)  
-![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)  
-![Platform](https://img.shields.io/badge/Platform-Windows-0078D6.svg?style=for-the-badge&logo=windows)
-
-*A developer-focused Unity overlay for visual debugging and runtime inspection of game objects.*
-
-**ℹ️ Intended use:** This project is intended **only** as a developer tool for debugging, testing and visualization in Unity. Do **not** use it to modify multiplayer games in ways that violate their Terms of Service.  
+![Unity](https://img.shields.io/badge/Unity-2022.3+-black.svg?style=for-the-badge&logo=unity)   ![.NET](https://img.shields.io/badge/.NET-Standard%202.1-512BD4.svg?style=for-the-badge&logo=dotnet)   ![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)   ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6.svg?style=for-the-badge&logo=windows)
 
 </div>
 
@@ -33,14 +26,13 @@ This is a Unity-based **debug overlay** that provides real-time visual overlays 
 
 ## ✨ Features
 
-| Feature | Description | Status |
-|---------|-------------|--------|
-| 🎯 **Entity Highlighting** | Visual highlighting of selected entities with labels | ✅ Working |
-| 📏 **Distance Display** | Real-time distance calculation to tracked objects | ✅ Working |
-| ❤️ **Health Display** | Health points / status overlay for debug builds | ✅ Working |
-| 💎 **Item Markers** | Mark and label important in-game objects (e.g. pickups) | ✅ Working |
-| 🔄 **Cross-scene** | Optional persistence across scene loads (dev builds) | ✅ Working |
-| 🎨 **Custom GUI** | Simple, customizable overlay using IMGUI or Unity UI | ✅ Working |
+| Feature | Description |
+|---------|-------------|
+| 🎯 **Entity Highlighting** | Visual highlighting of selected entities with labels
+| 📏 **Distance Display** | Real-time distance calculation to tracked objects
+| ❤️ **Health Display** | Health points / status overlay for debug builds
+| 💎 **Item Markers** | Mark and label important in-game objects (e.g. pickups)
+| 🔄 **Cross-scene** | Optional persistence across scene loads (dev builds)
 
 ## 🛠️ Technical Details
 
@@ -66,7 +58,7 @@ namespace REPO.DebugOverlay
 ## 📁 Project Structure
 
 ```
-REPO-DebugOverlay/
+REPO-CheatV1/
 ├── 📄 Hacks.cs           # Main debug logic & GUI toggles
 ├── 📄 Loader.cs          # Runtime initialization & persistence helpers
 ├── 📄 Render.cs          # Rendering utilities (WorldToScreen, draw primitives)
@@ -81,8 +73,8 @@ REPO-DebugOverlay/
 
 1. Clone or download the repo:
 ```bash
-git clone https://github.com/ItzKubass/REPO-DebugOverlay.git
-cd REPO-DebugOverlay
+git clone https://github.com/ItzKubass/REPO-CheatV1.git
+cd REPO-CheatV1
 ```
 
 2. Copy the `Hacks.cs`, `Loader.cs`, `Render.cs` (or the `Runtime` folder) into your Unity project's `Assets/` folder.
@@ -152,9 +144,9 @@ Vector3 WorldToScreen(Vector3 worldPosition)
 }
 ```
 
-> Tip: prefer `Camera.WorldToScreenPoint` for clarity and correctness; the manual matrix multiplication variant is shown below for educational purposes.
+> Tip: prefer `Camera.WorldToScreenPoint` for clarity and correctness; the manual matrix multiplication variant is shown below for  purposes.
 
-Manual matrix example (educational):
+Manual matrix example ():
 ```csharp
 Vector3 WorldToScreenManual(Vector3 worldPosition)
 {
@@ -174,22 +166,13 @@ This project is licensed under the MIT License. See `LICENSE.txt` for details.
 
 ```
 MIT License
-Copyright (c) 2024 ItzKubass
+Copyright (c) 2024-2025 ItzKubass
 ```
 
 ## ❓ FAQ
 
-**❔ Is this detected?**  
-This is a local developer tool meant for testing and debugging. Do not use it in ways that break a game's Terms of Service.
-
 **❔ Can I get banned?**  
-If used to alter or automate behavior in online games, yes—modifying live multiplayer clients can result in bans. Keep the tool for local development or authorized QA only.
-
-**❔ How often is this updated?**  
-Updates are released as needed for compatibility improvements and additional debug features.
-
-**❔ Can I contribute?**  
-Yes — please submit pull requests or open issues that target legitimate development and debugging uses.
+If used to alter or automate behavior in online games, yes—modifying live multiplayer clients can result in bans.
 
 ## 👨‍💻 Credits
 
